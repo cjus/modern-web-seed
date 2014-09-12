@@ -1,0 +1,14 @@
+.DS_Store
+.idea
+.tmp
+.sass-cache/*
+bower_components/*
+dist/*
+node_modules/*
+npm-debug.log
+scratch.js
+scratch.json
+scratch.txt
+worklog.txt
+*.log
+*.pid

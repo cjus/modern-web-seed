@@ -1,0 +1,28 @@
+{
+  "name": "2fa-test",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec"
+  ],
+  "dependencies": {
+    "angular": "1.2.24",
+    "angular-animate": "1.2.24",
+    "angular-cookie": "~4.0.2",
+    "angular-route": "1.2.24",
+    "angular-sanitize": "1.2.24",
+    "es5-shim": "~4.0.3",
+    "jquery": "~1.10.2",
+    "sass-bootstrap": "~3.0.0",
+    "json3": "~3.3.2",
+    "respond": "~1.4.2",
+    "underscore": "~1.7.0",
+    "angular-strap": "~2.1.0"
+  },
+  "private": true,
+  "devDependencies": {
+    "angular-mocks": "~1.2.24"
+  }
+}

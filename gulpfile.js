@@ -27,7 +27,7 @@ gulp.task('lint', function() {
 
 gulp.task('sass', function() {
   'use strict';
-  return gulp.src('scss/*.scss')
+  return gulp.src('./scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('css'));
 });
@@ -50,7 +50,7 @@ gulp.task('copy', function() {
 
 gulp.task('image', function() {
   'use strict';
-  return gulp.src('images/*')
+  return gulp.src('./images/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [

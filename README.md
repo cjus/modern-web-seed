@@ -27,6 +27,11 @@ Any modern web development process should include:
  
 ## Setup
 
+First I assume you've installed Git and NodeJS
+
+* Download and install [git](http://git-scm.com/downloads)
+* Download and install [nodeJS](http://nodejs.org/download/)
+
 MSW requires that you have [bower](http://bower.io/), [gulp](http://gulpjs.com) and [karma](http://karma-runner.github.io) installed:
 
     $ sudo npm install -g bower 
@@ -37,6 +42,12 @@ In the project folder we need to hydrate the project's required files.
    
     $ sudo npm install
     $ bower install
+
+## You're now ready to customize the seed app
+
+* Replace the web files with your own project files.  
+* Add and remove dependencies using bower.
+
 
 ## Working on your project with live reload
 

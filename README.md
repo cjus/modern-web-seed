@@ -1,8 +1,19 @@
 # Modern Website Seed (MWS)
 
+A reference project which demonstrates a development workflow for building web applications using AngularJS, Bootstrap3, Gulp, Jasmine, JSHint, Karma, SASS.
+
+## Yet another seed app?
+
+A few years ago I started using [Yeoman](http://yeoman.io/) and the [angular-generator](generator-angular) to create starting points for my web projects. It seems that each time I prepare a new project I'd encounter issues during the seed app creation. One feature or another would be out of date or no longer working.  To be fare, all of the underlying tools and technologies are undergoing very active development. So at any given point grabbing the latest release can be risky.
+
+Still, I figured it was time to learn how the individual tools work, and how to properly configure and then integrate those tools into an efficient workflow. This project is the result of that effort. At the very least it can also serve as one implementation for others who may venture down this path.
+
 ## Features
+
+Any modern web development process should include:  
+
 * Bower to manage web module dependencies
-* Gulp as a task runner
+* Gulp as a task runner to automate repetitive task
     * minimizes HTML, CSS, JavaScript
     * compresses image assets prior to deployment
     * builds CSS from SASS/SCSS on change
@@ -16,7 +27,7 @@
  
 ## Setup
 
-MSW requires that you have bower, gulp and karma installed:
+MSW requires that you have [bower](http://bower.io/), [gulp](http://gulpjs.com) and [karma](http://karma-runner.github.io) installed:
 
     $ sudo npm install -g bower 
     $ sudo npm install -g gulp
@@ -29,6 +40,8 @@ In the project folder we need to hydrate the project's required files.
 
 ## Working on your project with live reload
 
+Live reload is a feature which automatically refreshes your web browser when you change your web files.
+ 
     $ gulp
 
 You should see:
@@ -44,6 +57,22 @@ You should see:
     [14:22:11] Finished 'default' after 11 μs
 
 Open your web browser at http://localhost:8080 to view your application. Changes you make to your html, css, scss, javascript files should cause a browser reload 
+
+## SASS support
+
+Place your files in the scss folder and use a gulp task to compile to CSS.
+
+	$ gulp sass
+	
+Note that if you're running in live reload mode then your sass/scss files are automatically processed as you make changes.
+
+## Creating a distribution for deployment
+
+When you're ready to deploy your project you can run the following command to compile (sass), compress images, HTML, CSS and JavaScript files into concatinated web efficient files.
+
+	$ gulp dist
+
+Your project will be built and placed in the `dist` folder where it can be deployed to your remote web server.
 
 ## Running tests with Karma and Jasmine
 

@@ -45,6 +45,8 @@ In the project folder we need to hydrate the project's required files.
 
 ## You're now ready to customize the seed app
 
+* Delete the .git folder. From within the project root use: `rm -rf .git` 
+* Use `git init` to create a new folder and move the seed file there, or rename the seed app folder.
 * Replace the web files with your own project files.  
 * Add and remove dependencies using bower.
 

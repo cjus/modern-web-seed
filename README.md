@@ -113,3 +113,56 @@ $ npm test
 
 That should launch a copy of Chrome and execute the spec test. As the specs are changed the results appear in the terminal window where Karma was started.
 
+## Tips for WebStorm users
+
+### Enable JSHint
+
+Take advantage of JS Linting and the included .jshintrc file while editing in WebStorm.
+
+Under Preferences / Project Settings / JavaScript / Code Quality Tools
+
+* Disable JSLint
+* Enable JSHint and make sure to check the "Use config files" checkbox to use the supplied project .jshintrc file.
+
+See the [JSHint documentation](http://www.jshint.com/docs/) for information about configuring the .jshintrc to your own liking.
+
+> Remember you can always run `gulp lint` for an on demand scan of your JS files.
+
+### Speed-up WebStorm during searches
+ 
+Under Preferences / Project Settings / Directories
+
+Exclude: 
+ 
+* .idea
+* node_modules
+* bower
+
+### Add common workflow commands to your IDE
+ 
+Under Preferences / Project Settings / IDE Settings / External Tools
+
+You may add commands you use during your workflow. In the example below I added a command to start live edit.   
+
+![image](./images/ws_liveedit.png)
+
+You can proceed to add other useful command by any of the following into the Parameters field shown above:
+ 
+Feature     |   Description   
+---         |   ---
+clean       |   Delete the contents of the dist folder
+dist        |   Builds a distribution version of your site
+lint        |   Run JSHint against your JS files
+sass        |   Compile your scss files
+image       |   Compress your images (adds compressed version to the dist/images folder
+
+You can then select commands from the WebStorm Tools menu.
+
+One nice benefit is that once you execute commands you can rerun them by clicking on the green play button:
+
+![image](./images/ws_externaltools.png)
+
+Finally, you can even add key bindings via: Preferences / Project Settings / IDE Settings / Keymap
+and selecting the `External tools` branch.
+
+

@@ -34,14 +34,18 @@ First I assume you've installed Git and NodeJS
 
 MSW requires that you have [bower](http://bower.io/), [gulp](http://gulpjs.com) and [karma](http://karma-runner.github.io) installed:
 
-    $ sudo npm install -g bower 
-    $ sudo npm install -g gulp
-    $ sudo npm install -g karma-cli
+```shell
+$ sudo npm install -g bower 
+$ sudo npm install -g gulp
+$ sudo npm install -g karma-cli
+```
      
 In the project folder we need to hydrate the project's required files.
-   
-    $ sudo npm install
-    $ bower install
+
+```shell
+$ sudo npm install
+$ bower install
+```
 
 ## You're now ready to customize the seed app
 
@@ -54,20 +58,24 @@ In the project folder we need to hydrate the project's required files.
 ## Working on your project with live reload
 
 Live reload is a feature which automatically refreshes your web browser when you change your web files.
- 
-    $ gulp
+
+```shell
+$ gulp
+```
 
 You should see:
-    
-    [14:22:11] Using gulpfile ~/gulpfile.js
-    [14:22:11] Starting 'watch'...
-    [14:22:11] Finished 'watch' after 12 ms
-    [14:22:11] Starting 'connect'...
-    [14:22:11] Server started http://localhost:8080
-    [14:22:11] LiveReload started on port 35729
-    [14:22:11] Finished 'connect' after 88 ms
-    [14:22:11] Starting 'default'...
-    [14:22:11] Finished 'default' after 11 μs
+
+```    
+[14:22:11] Using gulpfile ~/gulpfile.js
+[14:22:11] Starting 'watch'...
+[14:22:11] Finished 'watch' after 12 ms
+[14:22:11] Starting 'connect'...
+[14:22:11] Server started http://localhost:8080
+[14:22:11] LiveReload started on port 35729
+[14:22:11] Finished 'connect' after 88 ms
+[14:22:11] Starting 'default'...
+[14:22:11] Finished 'default' after 11 μs
+```
 
 Open your web browser at http://localhost:8080 to view your application. Changes you make to your html, css, scss, javascript files should cause a browser reload 
 
@@ -75,15 +83,19 @@ Open your web browser at http://localhost:8080 to view your application. Changes
 
 Place your files in the scss folder and use a gulp task to compile to CSS.
 
-	$ gulp sass
-	
+```shell
+$ gulp sass
+```
+
 Note that if you're running in live reload mode then your sass/scss files are automatically processed as you make changes.
 
 ## Creating a distribution for deployment
 
 When you're ready to deploy your project you can run the following command to compile (sass), compress images, HTML, CSS and JavaScript files into concatinated web efficient files.
 
-	$ gulp dist
+```shell
+$ gulp dist
+```
 
 Your project will be built and placed in the `dist` folder where it can be deployed to your remote web server.
 
@@ -93,7 +105,9 @@ Inside of the spec folder is a sample test file.
 
 Start the Karma test runner:
 
-    $ npm test
+```shell
+$ npm test
+```
 
 That should launch a copy of Chrome and execute the spec test. As the specs are changed the results appear in the terminal window where Karma was started.
 

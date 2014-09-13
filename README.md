@@ -146,7 +146,7 @@ You may add commands you use during your workflow. In the example below I added 
 
 ![image](./images/ws_liveedit.png)
 
-You can proceed to add other useful command by any of the following into the Parameters field shown above:
+You can proceed to add other useful command by adding any of the following into the Parameters field shown above:
  
 Feature     |   Description   
 ---         |   ---

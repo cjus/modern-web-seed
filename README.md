@@ -56,6 +56,40 @@ Note: this install can take a several minutes to complete.
 * Replace the web files with your own project files.  
 * Add and remove dependencies using bower.
 
+## Understanding the intended directory structure
+
+Here is a brief description of the directory structure how how it's intended to be used.  You can customize it to your liking but it will require you to make changes to the index.html and gulpfile.js files.
+
+```
+├── LICENSE                         Project license - can you say free?
+├── README.md                       This readme file
+├── bower.json                      bower file listing required JavaScript modules (such as Angular, jQuery and more)
+├── css                             Folder for you CSS files. Note Sass files will be moved here on compile
+│   └── styles.css                  Sample "compiled" Sass file
+├── dist                            Distribution folder. Running `gulp dist` will compile your site here
+├── fonts                           Font folder. Loaded with Bootstrap3 fonts
+├── gulpfile.js                     The Gulp configuration file
+├── images                          A folder for your images
+├── index.html                      Index.html file
+├── js                              Folder for your JS file, but does contain other file not managed by Bower
+│   ├── app.js                      App js file containing Angular app module and route
+│   ├── iebs                        IE Bullshit - enough said
+│   │   ├── es5-shim.min.js
+│   │   ├── json3.min.js
+│   │   └── respond.min.js
+│   ├── login_controller.js         Sample controller for mock login page
+│   └── vendor                      Vendor folder for JS modules not managed by Bower
+│       └── modernizr.js            Modernizr - note used by this project to resolve no_js class in index.html
+├── karma.config.js                 Karma test runner configuration file
+├── package.json                    Node NPM file listing required packages
+├── robots.txt                      Sample robots.txt file
+├── scss                            Folder for Sass files
+│   └── styles.scss                 Sample scss file
+├── spec                            Folder for Jasmine BDD specs 
+│   └── simple-spec.js              Sample spec file
+└── views                           The V in MVC, a folder for your views
+    └── login_view.html             Sample view
+```
 
 ## Working on your project with live reload
 
@@ -90,6 +124,10 @@ $ gulp sass
 ```
 
 Note that if you're running in live reload mode then your sass/scss files are automatically processed as you make changes.
+
+## Support for Modernizr
+
+There is a modernizr.js file in the js/vendor folder. This version of modernizr is loaded by the index.html and is intended to be a placeholder.  Visit the [modernizr](http://modernizr.com/download) site to create your own custom version. 
 
 ## Creating a distribution for deployment
 

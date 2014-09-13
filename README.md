@@ -47,6 +47,8 @@ $ sudo npm install
 $ bower install
 ```
 
+Note: this install can take a several minutes to complete.
+
 ## You're now ready to customize the seed app
 
 * Delete the .git folder. From within the project root use: `rm -rf .git` 

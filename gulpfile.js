@@ -87,10 +87,10 @@ gulp.task('reload', function() {
 
 gulp.task('watch', function() {
   'use strict';
-  gulp.watch('scss/*.scss', ['sass', 'reload']);
-  gulp.watch('index.html', ['reload']);
-  gulp.watch('/views/**/*.html', ['reload']);
-  gulp.watch('/js/**/*.js', ['reload']);
+  gulp.watch('./scss/*.scss', ['sass', 'reload']);
+  gulp.watch('./index.html', ['reload']);
+  gulp.watch('./views/**/*.html', ['reload']);
+  gulp.watch('./js/**/*.js', ['reload']);
 });
 
 gulp.task('connect', function() {

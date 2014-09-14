@@ -81,7 +81,7 @@ gulp.task('dist', ['lint', 'clean', 'sass', 'copy', 'image'], function() {
 
 gulp.task('reload', function() {
   'use strict';
-  return gulp.src('index.html')
+  return gulp.src('*')
     .pipe(connect.reload());
 });
 

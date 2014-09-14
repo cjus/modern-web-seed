@@ -31,6 +31,7 @@
     "jasmine": true,
     "module": true,
     "require": true,
-    "window": true
+    "window": true,
+    "$this": trueAdd
   }
 }

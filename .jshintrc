@@ -32,6 +32,6 @@
     "module": true,
     "require": true,
     "window": true,
-    "$this": trueAdd
+    "$this": true
   }
 }

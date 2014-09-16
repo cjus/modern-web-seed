@@ -5,6 +5,7 @@ var outputDir = './';
 
 // Include Our Plugins
 var jshint = require('gulp-jshint')
+  , templateCache = require('gulp-angular-templatecache')
   , sass = require('gulp-sass')
   , uglify = require('gulp-uglify')
   , clean = require('gulp-clean')
@@ -25,20 +26,20 @@ gulp.task('lint', function() {
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', ['lint'], function() {
   'use strict';
   return gulp.src('./scss/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('css'));
 });
 
-gulp.task('clean', function() {
+gulp.task('clean', ['sass'], function() {
   'use strict';
   return gulp.src(['dist/*'], {read: false})
     .pipe(clean());
 });
 
-gulp.task('copy', function() {
+gulp.task('copy', ['clean'], function() {
   'use strict';
   var filesToCopy = [
     './fonts/**/*.*',
@@ -48,7 +49,7 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('image', function() {
+gulp.task('image', ['copy'], function() {
   'use strict';
   return gulp.src('./images/*')
     .pipe(imagemin({
@@ -61,22 +62,33 @@ gulp.task('image', function() {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('dist', ['lint', 'clean', 'sass', 'copy', 'image'], function() {
+
+gulp.task('predist1', ['image'], function() {
   'use strict';
-  gulp.src(['./views/*.html'])
-    .pipe(usemin({
-      css: [minifyCss(), 'concat'],
-      html: [minifyHtml({empty: true})],
-      js: [ngAnnotate(), uglify(), rev()]
+  return gulp.src(['./views/*.html'])
+    .pipe(templateCache('templates.js', {
+      root: './views/',
+      module: 'app'
     }))
-    .pipe(gulp.dest('dist/views'));
-  gulp.src('./*.html')
+    .pipe(gulp.dest('js/'));
+});
+
+gulp.task('predist2', ['predist1'], function() {
+  'use strict';
+  return gulp.src('./*.html')
     .pipe(usemin({
       css: [minifyCss(), 'concat'],
       html: [minifyHtml({empty: true})],
       js: [ngAnnotate(), uglify(), rev()]
     }))
     .pipe(gulp.dest('dist/'));
+});
+
+
+gulp.task('dist', ['predist2'], function() {
+  'use strict';
+  var fs = require('fs');
+  fs.writeFile('js/templates.js', '/* MOCK FILE - Used by gulp build process to store compiled AngularJS view templates */\n(function() {\n  "use strict";\n})();');
 });
 
 gulp.task('reload', function() {

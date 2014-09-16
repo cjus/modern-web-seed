@@ -11,7 +11,7 @@ angular.module('app', ['ngRoute', 'mgcrea.ngStrap'])
 
     $routeProvider
       .when('/', {
-        templateUrl: './views/login_view.html',
+        templateUrl: 'views/login_view.html',
         controller: 'LoginController'
       })
       .otherwise({

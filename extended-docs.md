@@ -102,6 +102,29 @@ $ npm test
 
 That should launch a copy of Chrome and execute the spec test. As the specs are changed the results appear in the terminal window where Karma was started.
 
+## Angular UI Bootstrap or Angular Strap?
+
+Which Angular friendly UI Bootstrap component framework you use is up to you.  This project uses AngularUI but you can easily switch to AngularStrap with these easy steps.
+
+In the index.html file swap the comments for these lines:
+
+```
+<!--<script src="bower_components/angular-strap/dist/angular-strap.min.js"></script>-->
+<!--<script src="bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>-->
+<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+```
+
+In the js/app.js file swap the comments for these lines:
+
+```
+//angular.module('app', ['ngRoute', 'mgcrea.ngStrap'])
+angular.module('app', ['ngRoute', 'ui.bootstrap'])
+```
+
+Once you've decided which to use you can delete the commented lines and delete the branch in bower_commponents for the framework you're not using.
+Also make sure to update your bower.json file by removing the line for the framework you don't need.
+
 ## Tips for WebStorm users
 
 ### Enable JSHint

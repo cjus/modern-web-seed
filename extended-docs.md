@@ -76,19 +76,23 @@ $ gulp sass
 
 Note that if you're running in live reload mode then your sass/scss files are automatically processed as you make changes.
 
+The modern-web-seed doesn't just support SASS - it expects that you're using it to manage your project CSS needs. Don't update the files in the css folder as they'll be overwritten every time `gulp sass` or `gulp dist` is executed.  If you don't want to use SASS you can remove support for it by editing your gulpfile.js.
+
 ## Support for Modernizr
 
 There is a modernizr.js file in the js/vendor folder. This version of modernizr is loaded by the index.html and is intended to be a placeholder.  Visit the [modernizr](http://modernizr.com/download) site to create your own custom version. 
 
 ## Creating a distribution for deployment
 
-When you're ready to deploy your project you can run the following command to compile (sass), compress images, HTML, CSS and JavaScript files into concatinated web efficient files.
+When you're ready to deploy your project you can run the following command to compile (sass), compress images, HTML, CSS and JavaScript files into concatenated web efficient files.
 
 ```shell
 $ gulp dist
 ```
 
 Your project will be built and placed in the `dist` folder where it can be deployed to your remote web server.
+
+Keep in mind that every time you run `gulp dist` the contents of the dist folder are deleted and recreated!  Do not add file into the dist folder it's only intended to host the most recent build.
 
 ## Running tests with Karma and Jasmine
 
@@ -122,7 +126,7 @@ In the js/app.js file swap the comments for these lines:
 angular.module('app', ['ngRoute', 'ui.bootstrap'])
 ```
 
-Once you've decided which to use you can delete the commented lines and delete the branch in bower_commponents for the framework you're not using.
+Once you've decided which to use you can delete the commented lines and delete the branch in bower_components for the framework you're not using.
 Also make sure to update your bower.json file by removing the line for the framework you don't need.
 
 ## Tips for WebStorm users
@@ -176,6 +180,19 @@ One nice benefit is that once you execute commands you can rerun them by clickin
 
 Finally, you can even add key bindings via: Preferences / Project Settings / IDE Settings / Keymap
 and selecting the `External tools` branch.
+
+## Troubleshooting guide
+
+The modern-web-seed should run using the instructions provided with the project.  Here are some issues you may encounter and how you might work through them.
+
+### I get errors when I build using `gulp dist`
+* You may have received bad files during npm install or bower install.  Try deleting the `bower_components` and `node_modules` folders and rerunning the steps in the [README.md](README.md) file.
+* You may have encountered file permission issues.  Try deleting the `node_modules` folders and rerunning using the sudo command.
+
+### I get an error message when I run `gulp` or `gulp watch`
+* Make sure you're not running another process which is using port 8080 and/or 9876.
+
+
 
 [Return to document root](README.md)
 

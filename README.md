@@ -4,9 +4,9 @@ A reference project which demonstrates a development workflow for building web a
 
 ## Yet another seed app?
 
-A few years ago I started using [Yeoman](http://yeoman.io/) and the [angular-generator](generator-angular) to create starting points for my web projects. It seems that each time I prepare a new project I'd encounter issues during the seed app creation. One feature or another would be out of date or no longer working.  To be fare, all of the underlying tools and technologies are undergoing very active development. So at any given point grabbing the latest release can be risky.
+A few years ago I started using [Yeoman](http://yeoman.io/) and the [angular-generator](generator-angular) to create starting points for my web projects. It seems that each time I prepare a new project I'd encounter issues during the seed app creation. One feature or another would be out of date or no longer working.  To be fair, all of the underlying tools and technologies are undergoing very active development. So at any given point grabbing the latest release can be risky.
 
-Still, I figured it was time to learn how the individual tools work, and how to properly configure and then integrate those tools into an efficient workflow. This project is the result of that effort. At the very least it can also serve as one implementation for others who may venture down this path.
+Still, I figured it was time to learn how the individual tools work, and how to properly configure and then integrate those tools into an efficient workflow. This project is the result of that effort. At the very least it can also serve as another implementation for those who may venture down this path.
 
 ## Features
 
@@ -51,4 +51,4 @@ Note: this install can take a several minutes to complete.
 
 ## You're now ready to customize the seed app
 
-Read the [extended docs](extended-docs.md)
+Read the [extended docs](extended-docs.md) to learn more about working with MWS.

@@ -186,6 +186,7 @@ and selecting the `External tools` branch.
 The modern-web-seed should run using the instructions provided with the project.  Here are some issues you may encounter and how you might work through them.
 
 ### I get errors when I build using `gulp dist`
+* Don't forget that MWS has automatic lint support which scans your code for common errors. Scroll through the error output and make sure that the errors you're seeing are not in the linting phase ;-)
 * You may have received bad files during npm install or bower install.  Try deleting the `bower_components` and `node_modules` folders and rerunning the steps in the [README.md](README.md) file.
 * You may have encountered file permission issues.  Try deleting the `node_modules` folders and rerunning using the sudo command.
 

@@ -1,8 +1,6 @@
 // Include gulp
 var gulp = require('gulp');
 
-var outputDir = './';
-
 // Include Our Plugins
 var jshint = require('gulp-jshint')
   , templateCache = require('gulp-angular-templatecache')
@@ -108,7 +106,6 @@ gulp.task('watch', function() {
 gulp.task('connect', function() {
   'use strict';
   return connect.server({
-    root: [outputDir],
     port: 8080, // optional
     livereload: true
   });

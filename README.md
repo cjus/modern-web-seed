@@ -32,6 +32,14 @@ First I assume you've installed Git and NodeJS
 * Download and install [git](http://git-scm.com/downloads)
 * Download and install [nodeJS](http://nodejs.org/download/)
 
+Check the version of NPM you have installed:
+
+    $ npm --version
+
+If the version is less than 2.0.0, upgrade using:
+
+    $ npm install -g npm
+
 MSW requires that you have [bower](http://bower.io/), [gulp](http://gulpjs.com) and [karma](http://karma-runner.github.io) installed:
 
 ```shell

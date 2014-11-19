@@ -1,7 +1,6 @@
 {
-  "name": "2fa-test",
-  "description": "2fa-test",
-  "version": "0.0.2",
+  "name": "mws",
+  "description": "MWS - Modern Web Seed",
   "private": "true",
   "scripts": {
     "test": "karma start karma.config.js"

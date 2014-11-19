@@ -1,6 +1,5 @@
 {
-  "name": "2fa-test",
-  "version": "0.0.1",
+  "name": "mws",
   "ignore": [
     "**/.*",
     "node_modules",

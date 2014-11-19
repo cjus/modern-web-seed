@@ -106,6 +106,14 @@ $ npm test
 
 That should launch a copy of Chrome and execute the spec test. As the specs are changed the results appear in the terminal window where Karma was started.
 
+## Creating build releases
+
+Your current app version is stored in a file called VERSION.  You can simply run the `release.sh` shell script to update your apps version.
+
+	$ ./release.sh
+
+This updates the VERSION file and creates a new release version on your project's git repo.	
+
 ## Angular UI Bootstrap or Angular Strap?
 
 Which Angular friendly UI Bootstrap component framework you use is up to you.  This project uses AngularUI but you can easily switch to AngularStrap with these easy steps.

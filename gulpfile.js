@@ -8,6 +8,7 @@ var jshint = require('gulp-jshint')
   , uglify = require('gulp-uglify')
   , clean = require('gulp-clean')
   , connect = require('gulp-connect')
+  , prettify = require('gulp-jsbeautifier')
   , usemin = require('gulp-usemin')
   , minifyHtml = require('gulp-minify-html')
   , minifyCss = require('gulp-minify-css')
@@ -16,6 +17,13 @@ var jshint = require('gulp-jshint')
   , imagemin = require('gulp-imagemin')
   , pngcrush = require('imagemin-pngcrush');
 
+
+gulp.task('js-beautify', function() {
+  'use strict';
+  gulp.src('./js/*.js')
+    .pipe(prettify({config: '.jsbeautifyrc', mode: 'VERIFY_AND_WRITE'}))
+    .pipe(gulp.dest('./js'));
+});
 
 gulp.task('lint', function() {
   'use strict';

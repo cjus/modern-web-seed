@@ -82,6 +82,26 @@ The modern-web-seed doesn't just support SASS - it expects that you're using it 
 
 There is a modernizr.js file in the js/vendor folder. This version of modernizr is loaded by the index.html and is intended to be a placeholder.  Visit the [modernizr](http://modernizr.com/download) site to create your own custom version. 
 
+## Keeping your code bee-e-u-tea-full
+
+MWS includes a `.jsbeautifyrc` file containing defaults for js-beautify.  By default, the included gulpfile.js does not automatically run js-beautify on your code. You need to do this manually.
+
+    $ gulp js-beautify
+
+If you want this to happen automatically you can modify the following line or otherwise edit your custom gulpfile.js.
+
+In gulpfile.js change:
+
+     gulp.task('lint', function() {
+
+To:
+
+    gulp.task('lint', ['js-beautify'], function() {
+
+Now when lint is run it first runs js-beautify.  This ensures that your code is already cleaned *before* the linter looks at it.
+
+See https://github.com/beautify-web/js-beautify for more information.
+
 ## Creating a distribution for deployment
 
 When you're ready to deploy your project you can run the following command to compile (sass), compress images, HTML, CSS and JavaScript files into concatenated web efficient files.

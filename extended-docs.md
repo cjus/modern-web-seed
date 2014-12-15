@@ -2,6 +2,20 @@
 
 ## You're now ready to customize the seed app
 
+You're not ready build your own application based on the Modern web seed app. You have two ways to go about that: automated and manual methods.
+
+### Automated prep
+
+Use the Github Importer to import MWS and create a new project repo. [https://import.github.com/new](https://import.github.com/new)
+
+It's the easiest way of using MWS to create your own app under your github account.
+
+![](images/GitHub_Importer.png)
+
+### Manual prep
+
+The automated prep is is the easiest way to get started.  You can however, use the following steps to manual prepare MWS for your own use:
+
 * Delete the .git folder. From within the project root use: `rm -rf .git` 
 * Use `git init` to create a new folder and move the seed file there, or rename the seed app folder.
 * Replace the web files with your own project files.  

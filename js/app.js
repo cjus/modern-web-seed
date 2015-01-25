@@ -5,7 +5,7 @@
  */
 //angular.module('app', ['ngRoute', 'mgcrea.ngStrap'])
 angular.module('app', ['ngRoute', 'ui.bootstrap'])
-  .config(function($routeProvider, $locationProvider) {
+  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
     'use strict';
 
     $locationProvider.html5Mode(true);
@@ -18,4 +18,4 @@ angular.module('app', ['ngRoute', 'ui.bootstrap'])
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);

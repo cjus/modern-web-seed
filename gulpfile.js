@@ -81,7 +81,7 @@ gulp.task('predist1', ['image'], function() {
 
 gulp.task('predist2', ['predist1'], function() {
   'use strict';
-  return gulp.src('./*.html')
+  return gulp.src('./index.html')
     .pipe(usemin({
       css: [minifyCss(), 'concat'],
       html: [minifyHtml({empty: true})],
@@ -89,7 +89,6 @@ gulp.task('predist2', ['predist1'], function() {
     }))
     .pipe(gulp.dest('dist/'));
 });
-
 
 gulp.task('dist', ['predist2'], function() {
   'use strict';

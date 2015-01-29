@@ -8,6 +8,7 @@ var jshint = require('gulp-jshint')
   , uglify = require('gulp-uglify')
   , clean = require('gulp-clean')
   , connect = require('gulp-connect')
+  , jscs = require('gulp-jscs')
   , prettify = require('gulp-jsbeautifier')
   , usemin = require('gulp-usemin')
   , minifyHtml = require('gulp-minify-html')
@@ -30,6 +31,12 @@ gulp.task('lint', function() {
   return gulp.src('./js/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
+});
+
+gulp.task('jscs', function() {
+  'use strict';
+  return gulp.src('./js/*.js')
+    .pipe(jscs());
 });
 
 gulp.task('sass', ['lint'], function() {

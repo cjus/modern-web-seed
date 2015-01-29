@@ -19,6 +19,7 @@ Any modern web development process should include:
     * builds CSS from SASS/SCSS on change
     * handles properly minimizing AngularJS files using ngAnnotate
     * jshint to lint JS files
+    * jscs to check JS files against Google JavaScript Style Guide
     * adds revision hash to js file names
     * builds into a dist folder for deployment
     * live reload support

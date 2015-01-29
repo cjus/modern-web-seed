@@ -5,17 +5,18 @@
  */
 //angular.module('app', ['ngRoute', 'mgcrea.ngStrap'])
 angular.module('app', ['ngRoute', 'ui.bootstrap'])
-  .config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-    'use strict';
+  .config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+      'use strict';
 
-    $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
 
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/login_view.html',
-        controller: 'LoginController'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  }]);
+      $routeProvider
+        .when('/', {
+          templateUrl: 'views/login_view.html',
+          controller: 'LoginController'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
+    }]);

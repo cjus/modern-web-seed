@@ -2,7 +2,7 @@
 
 ## You're now ready to customize the seed app
 
-You're not ready build your own application based on the Modern web seed app. You have two ways to go about that: automated and manual methods.
+You're now ready build your own application based on the Modern web seed app. You have two ways to go about that: automated and manual methods.
 
 ### Automated prep
 
